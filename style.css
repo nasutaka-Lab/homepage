@@ -283,12 +283,32 @@ ul {
     min-width: 100px;
 }
 
-.news-content h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+.new-content h3 {
+    background-image: repeating-linear-gradient(to bottom right,
+            hsl(0deg, 80%, 50%),
+            hsl(60deg, 80%, 50%),
+            hsl(120deg, 80%, 50%),
+            hsl(180deg, 80%, 50%),
+            hsl(240deg, 80%, 50%),
+            hsl(300deg, 80%, 50%),
+            hsl(360deg, 80%, 50%) 50%);
+    background-size: 1000% 1000%;
+    animation: colorRotation 20s linear infinite;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 0.1px #000000;
 }
 
-.news-content p {
+@keyframes colorRotation {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 500% 500%;
+    }
+}
+
+.new-content p {
     font-size: 0.95rem;
     color: #666;
 }
