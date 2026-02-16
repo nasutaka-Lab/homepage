@@ -283,7 +283,7 @@ ul {
     min-width: 100px;
 }
 
-.new-content h3 {
+.news-item {
     background-image: repeating-linear-gradient(to bottom right,
             hsl(0deg, 80%, 50%),
             hsl(60deg, 80%, 50%),
@@ -293,9 +293,7 @@ ul {
             hsl(300deg, 80%, 50%),
             hsl(360deg, 80%, 50%) 50%);
     background-size: 1000% 1000%;
-    animation: colorRotation 2s linear infinite;
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke: 0.1px #000000;
+    animation: colorRotation 200s linear infinite;
 }
 
 @keyframes colorRotation {
