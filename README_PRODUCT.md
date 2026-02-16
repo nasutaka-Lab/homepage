@@ -5,14 +5,18 @@
 ## 1. Youtube動画を追加する
 
 `index.html` の `<div class="product-grid youtube-grid">` 内に、以下のコード（`product-card`）を追加してください。
-**複数の動画を並べたい場合は、この `product-card` 単位で複製して追加してください。**（自動的に3列程度のグリッドで並びます）
 
 ```html
 <div class="product-card video-card">
-    <div class="video-container">
-        <!-- Youtubeの埋め込みコードのsrc属性を差し替えてください -->
-        <iframe src="https://www.youtube.com/embed/動画ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
+    <a href="https://www.youtube.com/watch?v=動画のID" class="video-thumbnail-link" target="_blank" rel="noopener noreferrer">
+        <div class="video-thumbnail-container">
+            <!-- 自分で用意した画像（サムネイル）を指定してください -->
+            <img src="images/ご自身の画像.jpg" alt="動画のタイトル">
+            <div class="play-overlay">
+                <i class="fa-solid fa-play"></i>
+            </div>
+        </div>
+    </a>
     <div class="product-info">
         <h4>動画のタイトル</h4>
         <p>動画の簡単な説明文を書きます。</p>
@@ -20,9 +24,19 @@
 </div>
 ```
 
-**Youtubeの動画IDの取得方法:**
-Youtube動画のURL（例：`https://www.youtube.com/watch?v=dQw4w9WgXcQ`）の `v=` 以降の文字列（この例では `dQw4w9WgXcQ`）が動画IDです。
-埋め込み用のURLは `https://www.youtube.com/embed/動画ID` となります。
+**画像の挿入方法:**
+
+1.  **画像を準備する:**
+    動画のサムネイルとして表示したい画像（推奨サイズ 1280x720 など 16:9 の比率）を用意します。
+2.  **フォルダに保存:**
+    用意した画像をプロジェクト内の `images` フォルダなどに保存します。
+3.  **HTMLを書き換える:**
+    上記のコードの `<img>` タグの `src` 属性に、保存した画像へのパス（例: `images/thumb.jpg`）を記述してください。
+
+**ポイント:**
+- サムネイル形式にすることで、ページの読み込みが軽くなります。
+- ホバーすると再生ボタンが表示されるリッチなデザインになっています。
+- リンク先 (`href`) には `https://www.youtube.com/watch?v=動画のID` 形式で動画URLを設定してください。
 
 ## 2. 自作ツールを追加する
 

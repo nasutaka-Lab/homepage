@@ -40,7 +40,7 @@
     <main>
         <section id="hero" class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">Welcome to<br><span class="gradient-text">Nasutaka's World</span></h1>
+                <h1 class="hero-title">Welcome to<br><span class="gradient-text">Nasutaka's Website</span></h1>
                 <p class="hero-subtitle">Creating new experiences.</p>
                 <a href="#profile" class="btn btn-primary">Discover More</a>
             </div>
@@ -55,7 +55,7 @@
                     <div class="profile-text">
                         <h3>なすたか</h3>
                         <p>どうもこんにちは！何をやっているのかよくわからない「なすたか」です！</p>
-                        <p>今やってること：動画投稿・プログラミングの勉強・生徒会長</p>
+                        <p>今やってること：動画投稿（低頻度）・プログラミングの勉強・生徒会長</p>
                         <p>いまはとにかく技術力を身に着けたい！</p>
                     </div>
                 </div>
@@ -69,9 +69,8 @@
                     <article class="news-item">
                         <div class="news-date">2026.02.15</div>
                         <div class="news-content">
-                            <h3>【new!!】プロフィールを更新しました</h3>
-                            <p>プロフィールを更新しました。</p>
-                            <a href="#profile">プロフィール</a>
+                            <h3 class="new-title">NEW!!</h3>
+                            <h3>プロフィールを更新しました</h3>
                         </div>
                     </article>
                     <article class="news-item">
@@ -89,47 +88,57 @@
         <section id="product" class="section">
             <div class="container">
                 <h2 class="section-title">Product</h2>
-                <p class="section-desc">Youtube動画や自作ツールを紹介します。</p>
+                <p class="section-desc">Youtube動画や自作（AIによる補助も含む）ツールを紹介します。</p>
 
                 <h3 class="subsection-title"><i class="fa-brands fa-youtube"></i> YouTube Videos</h3>
                 <div class="product-grid youtube-grid">
                     <div class="product-card video-card">
-                        <div class="video-container">
-                            <iframe
-                                src="https://www.youtube.com/embed/videoseries?list=PL_Xv_uV9vYf4mK_u9O3wSVE6kI_u0ySRE"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
-                        </div>
+                        <a href="https://youtu.be/QYXjjyxonUU" class="video-thumbnail-link" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="video-thumbnail-container">
+                                <!-- 表示したい画像（サムネイル）を指定してください -->
+                                <img src="images/JSP.png" alt="【初投稿】住民が失踪した事故物件を監視してみた#1">
+                                <div class="play-overlay">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                            </div>
+                        </a>
                         <div class="product-info">
-                            <h4>プレイリスト 1</h4>
-                            <p>これまでの活動動画のプレイリストその1です。</p>
+                            <h4>【初投稿】住民が失踪した事故物件を監視してみた#1</h4>
+                            <p></p>
                         </div>
                     </div>
                     <div class="product-card video-card">
-                        <div class="video-container">
-                            <iframe
-                                src="https://www.youtube.com/embed/videoseries?list=PL_Xv_uV9vYf4mK_u9O3wSVE6kI_u0ySRE"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
-                        </div>
+                        <a href="https://youtu.be/gRegDITawtU" class="video-thumbnail-link" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="video-thumbnail-container">
+                                <!-- 表示したい画像（サムネイル）を指定してください -->
+                                <img src="images/akuodo.png" alt="【ゆっくり実況】アクアリウムは踊らない#1　『水族館と消えた親友』">
+                                <div class="play-overlay">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                            </div>
+                        </a>
                         <div class="product-info">
-                            <h4>プレイリスト 2</h4>
-                            <p>これまでの活動動画のプレイリストその2です。</p>
+                            <h4>【ゆっくり実況】アクアリウムは踊らない#1　『水族館と消えた親友』</h4>
+                            <p></p>
                         </div>
                     </div>
                     <div class="product-card video-card">
-                        <div class="video-container">
-                            <iframe
-                                src="https://www.youtube.com/embed/videoseries?list=PL_Xv_uV9vYf4mK_u9O3wSVE6kI_u0ySRE"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
-                        </div>
+                        <a href="https://youtu.be/sSN-iTTIqzw" class="video-thumbnail-link" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="video-thumbnail-container">
+                                <!-- 表示したい画像（サムネイル）を指定してください -->
+                                <img src="images/taiyou.jpg"
+                                    alt="【閲覧注意】見てはいけない見てはいけない見てはいけない見てはいけない見てはいけない見てはいけない見てはいけない見てはいけない見てはいけない見てはいけない【ゆっくり実況】">
+                                <div class="play-overlay">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                            </div>
+                        </a>
                         <div class="product-info">
-                            <h4>プレイリスト 3</h4>
-                            <p>これまでの活動動画のプレイリストその3です。</p>
+                            <h4>【閲覧注意】見るな見るな見るな見るな【ゆっくり実況】</h4>
+                            <p></p>
                         </div>
                     </div>
                 </div>
