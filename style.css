@@ -283,7 +283,7 @@ ul {
     min-width: 100px;
 }
 
-.new-content h3 {
+.new-content {
     background-image: repeating-linear-gradient(to bottom right,
             hsl(0deg, 80%, 50%),
             hsl(60deg, 80%, 50%),
@@ -295,7 +295,7 @@ ul {
     background-size: 1000% 1000%;
     animation: colorRotation 2s linear infinite;
     color: rgb(255, 255, 255);
-    -webkit-text-stroke: 0.1px #000000;
+    -webkit-text-stroke: 0.3px #000000;
 }
 
 @keyframes colorRotation {
