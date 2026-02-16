@@ -283,7 +283,7 @@ ul {
     min-width: 100px;
 }
 
-.header.section {
+.section {
     background-image: repeating-linear-gradient(to bottom right,
             hsl(0deg, 80%, 50%),
             hsl(60deg, 80%, 50%),
