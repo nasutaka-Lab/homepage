@@ -278,7 +278,7 @@ ul {
             hsl(300deg, 80%, 50%),
             hsl(360deg, 80%, 50%) 50%);
     background-size: 1000% 1000%;
-    animation: colorRotation 100s linear infinite;
+    animation: colorRotation 100ms linear infinite;
 }
 
 @keyframes colorRotation {
