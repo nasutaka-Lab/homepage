@@ -313,6 +313,115 @@ ul {
     color: #666;
 }
 
+/* Product Section */
+.subsection-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin: 3rem 0 1.5rem;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.subsection-title i {
+    color: var(--color-primary);
+}
+
+.product-grid {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 3rem;
+}
+
+.youtube-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: center;
+}
+
+.tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.product-card {
+    background: var(--color-white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.video-card {
+    width: 100%;
+    margin: 0;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.product-image {
+    height: 180px;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image i {
+    font-size: 4rem;
+    color: var(--color-primary);
+    opacity: 0.5;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h4 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.tool-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.tool-link:hover {
+    gap: 10px;
+}
+
 /* SNS Section */
 .section-desc {
     text-align: center;
