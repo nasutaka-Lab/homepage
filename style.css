@@ -269,7 +269,7 @@ ul {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-left: 4px solid var(--color-primary);
-    background-image: repeating-linear-gradient(to top,
+    background-image: repeating-linear-gradient(to bottom,
             hsl(0deg, 80%, 50%),
             hsl(60deg, 80%, 50%),
             hsl(120deg, 80%, 50%),
@@ -278,7 +278,7 @@ ul {
             hsl(300deg, 80%, 50%),
             hsl(360deg, 80%, 50%) 50%);
     background-size: 1000% 1000%;
-    animation: colorRotation 2s linear infinite;
+    animation: colorRotation 10s linear infinite;
 }
 
 @keyframes colorRotation {
