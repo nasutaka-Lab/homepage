@@ -269,26 +269,6 @@ ul {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-left: 4px solid var(--color-primary);
-    background-image: repeating-linear-gradient(to top,
-            hsl(0deg, 80%, 50%),
-            hsl(60deg, 80%, 50%),
-            hsl(120deg, 80%, 50%),
-            hsl(180deg, 80%, 50%),
-            hsl(240deg, 80%, 50%),
-            hsl(300deg, 80%, 50%),
-            hsl(360deg, 80%, 50%) 50%);
-    background-size: 1000% 1000%;
-    animation: colorRotation 100s linear infinite;
-}
-
-@keyframes colorRotation {
-    from {
-        background-position: 0 0;
-    }
-
-    to {
-        background-position: 500% 500%;
-    }
 }
 
 .news-item:hover {
