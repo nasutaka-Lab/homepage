@@ -263,6 +263,7 @@ ul {
   background-color: #f0f4f8;
   border-radius: 10px;  
 }
+
 .news-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
@@ -278,16 +279,9 @@ ul {
     padding: 5px;
     margin: 10px;
 }
-
-.new {
-    color: #ffffff;
-    background-color: rgb(17, 150, 255);
-    border-radius: 10px;
-    padding: 5px 5px 5px 5px;
-    margin: auto;
-
+.news-sectionline {
+    color: #666;
 }
-
 
 /* Product Section */
 .subsection-title {
