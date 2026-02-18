@@ -262,6 +262,7 @@ ul {
 .news-item {
     background-color: #ffffff;
     border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .news-item:hover {
@@ -278,6 +279,7 @@ ul {
     border-radius: 10px;
     padding: 5px;
     margin: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .news-sectionline {
@@ -288,7 +290,6 @@ ul {
     margin-bottom: 20px;
     border: none;
     border-top: 2px solid #787878;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Product Section */
