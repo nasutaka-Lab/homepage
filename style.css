@@ -260,7 +260,7 @@ ul {
 }
 
 .news-item {
-    background-color: #f0f4f8;
+    background-color: #ffffff;
     border-radius: 10px;
 }
 
@@ -282,18 +282,13 @@ ul {
 
 .news-sectionline {
     width: 50%;
-    /* 線に幅を持たせる（例：親要素の50%） */
     margin-left: auto;
-    /* 左の余白を自動 */
     margin-right: auto;
-    /* 右の余白を自動 */
     margin-top: 20px;
     margin-bottom: 20px;
-    /* オプション：線の見た目調整 */
     border: none;
-    /* デフォルトのボーダーを消す */
-    border-top: 2px solid #333;
-    /* 線の太さ、色を設定 */
+    border-top: 2px solid #787878;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Product Section */
