@@ -260,15 +260,8 @@ ul {
 }
 
 .news-item {
-    display: flex;
-    gap: 30px;
-    padding: 25px;
-    background: var(--color-white);
-    margin-bottom: 20px;
+    background-color: #f0f4f8;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 4px solid var(--color-primary);
 }
 
 .news-item:hover {
@@ -287,19 +280,20 @@ ul {
     margin: 10px;
 }
 
-.new-title {
-    color: #ffffff;
-    background-color: rgb(255, 49, 53);
-    border-radius: 10px;
-    padding: auto;
-    margin: 10px;
-
-}
-
-
-.news-content {
-    font-size: 0.95rem;
-    background-color: #ffffffbb;
+.news-sectionline {
+    width: 50%;
+    /* 線に幅を持たせる（例：親要素の50%） */
+    margin-left: auto;
+    /* 左の余白を自動 */
+    margin-right: auto;
+    /* 右の余白を自動 */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* オプション：線の見た目調整 */
+    border: none;
+    /* デフォルトのボーダーを消す */
+    border-top: 2px solid #333;
+    /* 線の太さ、色を設定 */
 }
 
 /* Product Section */
