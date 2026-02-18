@@ -187,6 +187,7 @@ ul {
     position: relative;
     overflow: hidden;
     padding-top: 70px;
+
     /* Header height */
 }
 
@@ -197,8 +198,8 @@ ul {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: radial-gradient(circle at 20% 20%, rgba(76, 175, 80, 0.1) 0%, transparent 40%),
-        radial-gradient(circle at 80% 80%, rgba(0, 191, 255, 0.1) 0%, transparent 40%);
+    background: radial-gradient(circle at 20% 20%, rgba(76, 175, 80, 0.6) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 191, 255, 0.6) 0%, transparent 50%);
     opacity: 0.7;
 }
 
@@ -218,6 +219,13 @@ ul {
     letter-spacing: 2px;
 }
 
+.hero-content-box {
+    background: rgba(255, 255, 255, 0.363);
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.364);
+}
+
 /* Profile Section */
 .profile-content {
     display: flex;
@@ -225,6 +233,7 @@ ul {
     gap: 50px;
     max-width: 900px;
     margin: 0 auto;
+
 }
 
 .profile-image {
@@ -237,20 +246,27 @@ ul {
     flex-shrink: 0;
 }
 
-.profile-text {
+.profile-box {
     flex: 1;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    padding: 10px;
 }
 
+
 .profile-text h3 {
-    font-size: 2rem;
+    padding-left: 20px;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--color-text);
 }
 
 .profile-text p {
-    margin-bottom: 1rem;
-    color: #555;
-    line-height: 1.8;
+    margin: 10px;
+    color: #292929;
+    line-height: 1.5;
 }
 
 /* News Section */
@@ -263,6 +279,9 @@ ul {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    margin: 25px;
+    transition: all 0.3s ease;
 }
 
 .news-item:hover {
@@ -273,24 +292,18 @@ ul {
 .news-date {
     font-family: var(--font-heading);
     font-weight: 700;
-    color: var(--color-secondary);
+    color: #00BFFF;
     min-width: 100px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 5px;
-    margin: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.news-sectionline {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: none;
-    border-top: 2px solid #787878;
+.news-title {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 1.2rem;
 }
+
+
 
 /* Product Section */
 .subsection-title {
@@ -421,7 +434,7 @@ ul {
 }
 
 .product-image i {
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--color-primary);
     opacity: 0.5;
 }
@@ -441,6 +454,10 @@ ul {
     color: #666;
     margin-bottom: 15px;
     line-height: 1.6;
+}
+
+.product-info p b {
+    font-size: large;
 }
 
 .tool-link {
@@ -515,51 +532,26 @@ ul {
 
 /* Contact Section */
 .bg-gradient {
-    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+    background: radial-gradient(circle at 20% 20%, rgba(76, 175, 80, 0.6) 0%, transparent 1000px),
+        radial-gradient(circle at 80% 80%, rgba(0, 191, 255, 0.6) 0%, transparent 1000px);
     color: var(--color-white);
 }
 
 .text-white {
     color: var(--color-white);
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    font-family: var(--font-heading);
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: none;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.2);
-    color: var(--color-white);
-    font-family: inherit;
-    backdrop-filter: blur(5px);
-    transition: background 0.3s;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    padding: 10px 10px;
+    border-radius: 20px;
+    max-width: 300px;
+    margin: 40px auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contact-info-container {
     text-align: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.37);
     backdrop-filter: blur(10px);
     padding: 50px 30px;
     border-radius: 20px;

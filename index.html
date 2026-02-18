@@ -41,9 +41,11 @@
     <main>
         <section id="hero" class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">Welcome to<br><span class="gradient-text">Nasutaka's Website</span></h1>
-                <p class="hero-subtitle">Creating new experiences.</p>
-                <a href="#profile" class="btn btn-primary">Discover More</a>
+                <div class="hero-content-box">
+                    <h1 class="hero-title">Welcome to<br><span class="gradient-text">Nasutaka's Website</span></h1>
+                    <p class="hero-subtitle">Creating new experiences.</p>
+                    <a href="#profile" class="btn btn-primary">Discover More</a>
+                </div>
             </div>
             <div class="hero-background"></div>
         </section>
@@ -53,11 +55,12 @@
                 <h2 class="section-title">Profile</h2>
                 <div class="profile-content">
                     <img src="images/20250826_icon_simple.png" alt="Nasutaka Profile" class="profile-image">
-                    <div class="profile-text">
-                        <h3>なすたか</h3>
-                        <p>どうもこんにちは！何をやっているのかよくわからない「なすたか」です！</p>
-                        <p>今やってること：動画投稿（低頻度）・プログラミングの勉強・生徒会長</p>
-                        <p>いまはとにかく技術力を身に着けたい！</p>
+                    <div class="profile-box">
+                        <div class="profile-text">
+                            <h3>なすたか</h3>
+                            <p>どうもこんにちは！何をやっているのかよくわからない「なすたか」です！</p>
+                            <p>今やってること：動画投稿（低頻度）・プログラミングの勉強・生徒会長</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,26 +70,33 @@
             <div class="container">
                 <h2 class="section-title">News</h2>
                 <div class="news-list">
-                    <hr class="news-sectionline">
+
                     <article class="news-item">
                         <div class="news-date">2026.02.18</div>
                         <div class="news-content">
-                            <h3>ツール「文章作成ツール」を追加しました</h3>
+                            <h3 class="news-title">ホームページデザインを多少変更しました</h3>
+                        </div>
+                    </article>
+
+                    <article class="news-item">
+                        <div class="news-date">2026.02.18</div>
+                        <div class="news-content">
+                            <h3 class="news-title">ツール「文章作成ツール」を追加しました</h3>
                             <p>注意:作成にAIを使用しているため不安定でバグが残っています。使用には十分注意してください。</p>
                         </div>
                     </article>
-                    <hr class="news-sectionline">
+
                     <article class="news-item">
                         <div class="news-date">2026.02.15</div>
                         <div class="news-content">
-                            <h3>プロフィールを更新しました</h3>
+                            <h3 class="news-title">プロフィールを更新しました</h3>
                         </div>
                     </article>
-                    <hr class="news-sectionline">
+
                     <article class="news-item">
                         <div class="news-date">2026.02.15</div>
                         <div class="news-content">
-                            <h3>ホームページを開設しました</h3>
+                            <h3 class="news-title">ホームページを開設しました</h3>
                             <p>当ホームページを公開しました。今後の活動情報はこちらでも発信していきます。</p>
                         </div>
                     </article>
@@ -162,6 +172,9 @@
                         <div class="product-info">
                             <h4>文章作成ツール（開発中）</h4>
                             <p>デザイン付き文章が比較的簡単に作成できるツールです。</p>
+                            <p>注意:作成にAIを使用しているため不安定でバグが残っています。<b>使用には注意してください。</b>
+                                <br>一応、<b>個人情報</b>や<b>機密情報</b>の入力は<b>行わないでください。</b>
+                            </p>
                             <a href="https://nasutaka-lab.github.io/SC_kouhou_tool/" class="tool-link">View Project <i
                                     class="fa-solid fa-arrow-right"></i></a>
                         </div>
@@ -197,10 +210,9 @@
         <section id="contact" class="section bg-gradient">
             <div class="container">
                 <h2 class="section-title text-white">Contact</h2>
-                <p class="section-desc text-white">お問い合わせはこちらから</p>
                 <div class="contact-info-container">
                     <p>お問い合わせは、<br>以下のメールアドレスまでお願いいたします。</p>
-                    <a href="mailto:info@nasutaka.com" class="contact-email">
+                    <a href="mailto:nasutaka.ch@gmail.com" class="contact-email">
                         <i class="fa-regular fa-envelope"></i> nasutaka.ch@gmail.com
                     </a>
                 </div>
@@ -211,7 +223,7 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Nasutaka. All Rights Reserved.</p>
-            <p>最終更新:2026/02/18 15:15 (JST)</p>
+            <p>最終更新:2026/02/18 17:50 (JST)</p>
         </div>
     </footer>
 
