@@ -144,11 +144,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Special Rainbow Feature Logic ---
-    const specialBtn = document.getElementById('special-btn');
-    if (specialBtn) {
-        specialBtn.addEventListener('click', () => {
-            document.body.classList.toggle('rainbow-active');
-        });
-    }
+    // (removed special rainbow feature)
 });
