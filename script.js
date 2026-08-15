@@ -68,81 +68,85 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Modal Advertisement Logic ---
+    // If the modal HTML (`#ad-modal`) is not present, skip modal/interstitial behavior
     const modal = document.getElementById('ad-modal');
-    const closeBtn = document.querySelector('.close-btn');
-    let pendingNavigation = null;
+    if (modal) {
+        const closeBtn = document.querySelector('.close-btn');
+        let pendingNavigation = null;
 
-    const showModal = (targetUrl = null) => {
-        // Prevent showing if already shown/dismissed in this session
-        if (sessionStorage.getItem('ad-shown')) {
-            if (targetUrl) window.location.href = targetUrl;
-            return;
+        const showModal = (targetUrl = null) => {
+            // Prevent showing if already shown/dismissed in this session
+            if (sessionStorage.getItem('ad-shown')) {
+                if (targetUrl) window.location.href = targetUrl;
+                return;
+            }
+
+            // Modal is already showing
+            if (modal.classList.contains('show')) return;
+
+            pendingNavigation = targetUrl;
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            sessionStorage.setItem('ad-shown', 'true');
+        };
+
+        const closeModal = () => {
+            modal.classList.remove('show');
+            document.body.style.overflow = '';
+
+            // If there was a pending navigation, execute it after a short delay
+            if (pendingNavigation) {
+                const url = pendingNavigation;
+                pendingNavigation = null;
+                window.location.href = url;
+            }
+        };
+
+        // Show modal after 3 seconds
+        setTimeout(() => showModal(), 3000);
+
+        // Also show modal when user scrolls 20% down
+        let scrollTriggered = false;
+        window.addEventListener('scroll', () => {
+            if (scrollTriggered) return;
+
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            if (scrollPercent > 20) {
+                showModal();
+                scrollTriggered = true;
+            }
+        });
+
+        // Interstitial Logic: Show modal before navigating via links
+        document.addEventListener('click', (e) => {
+            const anchor = e.target.closest('a');
+            if (!anchor) return;
+
+            // Ignore modal's own buttons and internal anchor links that we handle elsewhere
+            const href = anchor.getAttribute('href') || '';
+            if (anchor.classList.contains('btn-discord') ||
+                anchor.classList.contains('close-btn') ||
+                href.startsWith('#')) {
+                return;
+            }
+
+            // Show modal and prevent crossing over yet
+            e.preventDefault();
+            showModal(anchor.href);
+        });
+
+        // Close button click
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeModal);
         }
 
-        // Modal is already showing
-        if (modal.classList.contains('show')) return;
-
-        pendingNavigation = targetUrl;
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-        sessionStorage.setItem('ad-shown', 'true');
-    };
-
-    const closeModal = () => {
-        modal.classList.remove('show');
-        document.body.style.overflow = '';
-
-        // If there was a pending navigation, execute it after a short delay
-        if (pendingNavigation) {
-            const url = pendingNavigation;
-            pendingNavigation = null;
-            window.location.href = url;
-        }
-    };
-
-    // Show modal after 3 seconds
-    setTimeout(() => showModal(), 3000);
-
-    // Also show modal when user scrolls 20% down
-    let scrollTriggered = false;
-    window.addEventListener('scroll', () => {
-        if (scrollTriggered) return;
-
-        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-        if (scrollPercent > 20) {
-            showModal();
-            scrollTriggered = true;
-        }
-    });
-
-    // Interstitial Logic: Show modal before navigating via links
-    document.addEventListener('click', (e) => {
-        const anchor = e.target.closest('a');
-        if (!anchor) return;
-
-        // Ignore modal's own buttons and internal anchor links that we handle elsewhere
-        if (anchor.classList.contains('btn-discord') ||
-            anchor.classList.contains('close-btn') ||
-            anchor.getAttribute('href').startsWith('#')) {
-            return;
-        }
-
-        // Show modal and prevent crossing over yet
-        e.preventDefault();
-        showModal(anchor.href);
-    });
-
-    // Close button click
-    if (closeBtn) {
-        closeBtn.addEventListener('click', closeModal);
+        // Click outside modal to close
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
     }
-
-    // Click outside modal to close
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
 
     // (removed special rainbow feature)
 });
